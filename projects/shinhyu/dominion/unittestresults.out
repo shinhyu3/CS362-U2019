@@ -1,0 +1,119 @@
+Results for running unit testing of functions:
+unittest1.c:
+TESTING baronCard function():
+Failed where next player is after current player.
+Failed incorrect amount of coins added.
+Failed where baron was discarded
+End Testing for BaronCard function().
+File 'dominion.c'
+Lines executed:23.78% of 572
+Branches executed:25.89% of 421
+Taken at least once:15.68% of 421
+Calls executed:16.00% of 100
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+TESTING minionCard function():
+Failed, choice1 and choice2 were not passed in the correct order.
+Failed, incorrect number of cards were drawn.
+End Testing for minionCard function().
+File 'dominion.c'
+Lines executed:21.85% of 572
+Branches executed:24.47% of 421
+Taken at least once:15.20% of 421
+Calls executed:14.00% of 100
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+TESTING ambassadorCard function():
+Failed player hand count is incorrect.
+Passed, variables in correct order.
+end of Testing for ambassadorCard function().
+File 'dominion.c'
+Lines executed:21.68% of 572
+Branches executed:25.42% of 421
+Taken at least once:15.91% of 421
+Calls executed:12.00% of 100
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+TESTING tributeCard function():
+Failed, two extra actions were not added.
+Passed, cards were discarded.
+End Testing for ambassadorCard function().
+File 'dominion.c'
+Lines executed:25.52% of 572
+Branches executed:31.12% of 421
+Taken at least once:19.24% of 421
+Calls executed:16.00% of 100
+Creating 'dominion.c.gcov'
+
+unittest5.c:
+TESTING mineCard function():
+Passed, successful discard.
+Failed, incorrect number of cards in deck.
+End Testing for mineCard function().
+File 'dominion.c'
+Lines executed:5.59% of 572
+Branches executed:17.34% of 421
+Taken at least once:4.04% of 421
+Calls executed:9.00% of 100
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+Testing initializeGame function():
+Passed, players are greater than 0.
+Failed, player1 cards are not initiailized.
+Failed, player2 cards are not initiailized.
+End testing initliazeGame function():
+File 'dominion.c'
+Lines executed:1.57% of 572
+Branches executed:2.85% of 421
+Taken at least once:2.14% of 421
+Calls executed:2.00% of 100
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+Testing shuffle function().
+Failed, deck was not shuffled.
+End Testing for shuffle function().
+File 'dominion.c'
+Lines executed:0.70% of 572
+Branches executed:0.48% of 421
+Taken at least once:0.24% of 421
+Calls executed:0.00% of 100
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+Testing endTurn function().
+Passed, the hand is 0 cards.
+Ending Test endTurn function().
+File 'dominion.c'
+Lines executed:6.82% of 572
+Branches executed:3.80% of 421
+Taken at least once:2.14% of 421
+Calls executed:4.00% of 100
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+Testing getWinners function().
+Passed, high score was valid.
+End testing for getWinners function().
+File 'dominion.c'
+Lines executed:4.20% of 572
+Branches executed:5.23% of 421
+Taken at least once:4.51% of 421
+Calls executed:1.00% of 100
+Creating 'dominion.c.gcov'
+
+cardtest5.c:
+Testing drawCard function().
+Failed, cards were not drawn.
+Ending test drawCard function().
+File 'dominion.c'
+Lines executed:2.62% of 572
+Branches executed:1.90% of 421
+Taken at least once:0.95% of 421
+Calls executed:1.00% of 100
+Creating 'dominion.c.gcov'
+
