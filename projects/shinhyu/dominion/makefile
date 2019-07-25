@@ -1,0 +1,48 @@
+CFLAGS = -Wall -fpic -coverage -lm -std=c99
+
+default: randomtestresults.out
+
+rngs.o: rngs.h rngs.c
+	gcc -c rngs.c -g  $(CFLAGS)
+
+dominion.o: dominion.h dominion.c rngs.o
+	gcc -c dominion.c -g  $(CFLAGS)
+
+playdom: dominion.o playdom.c
+	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
+
+randomtestresults.out: randomtestcard1.c randomtestcard2.c randomtestcard3.c dominion.c rngs.c
+	
+	echo "Results for running random testing of functions:" > randomtestresults.out	
+	echo "randomtestcard1.c:" >> randomtestresults.out
+	gcc -o randomtestcard1 dominion.c rngs.c randomtestcard1.c $(CFLAGS)
+	./randomtestcard1 >> randomtestresults.out
+	gcov dominion.c -b >> randomtestresults.out
+	
+	echo "randomtestcard2.c:" >> randomtestresults.out
+	gcc -o randomtestcard2 dominion.c rngs.c randomtestcard2.c $(CFLAGS)
+	./randomtestcard2 >> randomtestresults.out
+	gcov dominion.c -b >> randomtestresults.out
+	
+	echo "randomtestcard3.c:" >> randomtestresults.out
+	gcc -o randomtestcard3 dominion.c rngs.c randomtestcard3.c $(CFLAGS)
+	./randomtestcard3 >> randomtestresults.out
+	gcov dominion.c -b >> randomtestresults.out
+		
+randomtestcard1: randomtestcard1.c dominion.o
+	gcc -o randomtestcard1 dominion.c rngs.c randomtestcard1.c $(CFLAGS)
+
+randomtestcard2: randomtestcard2.c dominion.o
+	gcc -o randomtestcard2 dominion.c rngs.c randomtestcard2.c $(CFLAGS)
+
+randomtestcard3: randomtestcard3.c dominion.o
+	gcc -o randomtestcard3 dominion.c rngs.c randomtestcard3.c $(CFLAGS)
+
+clean: 
+	rm randomtestresults.out
+
+cleanall:
+	rm randomtestresults.out randomtestcard1 randomtestcard2 randomtestcard3 *.gcda *gcno *gcov
+
+
+
