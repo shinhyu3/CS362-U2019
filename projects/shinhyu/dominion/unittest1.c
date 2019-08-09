@@ -1,11 +1,6 @@
 /*--------------------------------------------------------
  * CS362 Assignment 3
  * Author: Hyunwook Shin
- * Description: Unit test 1 tests baronCard function.
- * From assignment 2 there were 2 bugs that were introduced.
- * 1) nextPlayer adds +2 to currentPlayer and 2) Number of coins
- * gained is reduced to +1 from +4. Unit test will examine
- * both scenarios and find bugs.
  *-------------------------------------------------------*/
 
 #include "dominion.h"
