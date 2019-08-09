@@ -1,10 +1,6 @@
 /*--------------------------------------------------------
  * CS362 Assignment 3
  * Author: Hyunwook Shin
- * Description: Unit test 3 tests ambassadorCard function.
- * From assignment 2 there were 2 bugs that were introduced.
- * 1) Variable i is declared at 100 instead of 0.
- * 2) Variable j is declared at 200 instead of 0.
  *-------------------------------------------------------*/
 
 #include "dominion.h"
