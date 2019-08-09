@@ -1,11 +1,6 @@
 /*--------------------------------------------------------
  * CS362 Assignment 3
  * Author: Hyunwook Shin
- * Description: Unit test 2 tests minionCard function.
- * From assignment 2 there were 2 bugs that were introduced.
- * 1) Mixes up the parameter list for choice2 and choice1.
- * 2) the i parameter is changed from 4 to 2 so the number
- * of cards a player draws is reduced to 2.
  *-------------------------------------------------------*/
 
 #include "dominion.h"
