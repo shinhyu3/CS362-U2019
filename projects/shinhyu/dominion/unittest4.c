@@ -1,12 +1,6 @@
 /*--------------------------------------------------------
  * CS362 Assignment 3
  * Author: Hyunwook Shin
- * Description: Unit test 4 tests tributeCard function.
- * From assignment 2 there were 2 bugs that were introduced.
- * 1) numActions has been changed from +2 to 0.
- * 2) tributeRevealedCards[i] == estate is done twice,
- * replacing the duchy. Nothing will happen when 
- * tributeRevealedCards[i] == duchy.
  *-------------------------------------------------------*/
 
 #include "dominion.h"
