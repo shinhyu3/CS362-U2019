@@ -646,7 +646,7 @@ int getCost(int cardNumber)
 int baronCard(int choice1, struct gameState *state, int handPos)
 {
   int currentPlayer = whoseTurn(state);
-  int nextPlayer = currentPlayer + 2; //bug 1, +! not +2
+  int nextPlayer = currentPlayer + 1; //bug 1, +! not +2
   
   if (nextPlayer > (state->numPlayers - 1)){
     nextPlayer = 0;
@@ -730,7 +730,7 @@ int minionCard(int choice2, int choice1, struct gameState *state, int handPos) /
 	    }
 				
 	  //draw 4
-	  for (i = 0; i < 2; i++) // BUG i is reduce to 2 so that number of draws is at 2 and not 4.
+	  for (i = 0; i < 4; i++) // BUG i is reduce to 2 so that number of draws is at 2 and not 4.
 	    {
 	      drawCard(currentPlayer, state);
 	    }
@@ -763,8 +763,8 @@ int minionCard(int choice2, int choice1, struct gameState *state, int handPos) /
 
 int ambassadorCard(int choice1, int choice2, struct gameState *state, int handPos)
 {
-  int i = 100; //BUG
-  int j = 200; //BUG
+  int i;
+  int j;
   int currentPlayer = whoseTurn(state);
       
       j = 0;		//used to check if player has enough cards to discard
@@ -885,7 +885,7 @@ int tributeCard(struct gameState *state)
 	  drawCard(currentPlayer, state); 
 	}
 	else{//Action Card
-	  state->numActions = state->numActions + 0; //BUG
+	  state->numActions = state->numActions + 2; //BUG
 	}
       }
 	    
@@ -901,7 +901,7 @@ int mineCard(int choice1, int choice2, struct gameState *state, int handPos)
 
       j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-      if (state->hand[currentPlayer][choice1] < copper && state->hand[currentPlayer][choice1] > gold) //BUG changed from || to &&.
+      if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold) //BUG changed from || to &&.
 	{
 	  return -1;
 	}
