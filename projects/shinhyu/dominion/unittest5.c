@@ -1,10 +1,6 @@
 /*--------------------------------------------------------
  * CS362 Assignment 3
- * Author: Hyunwook Shin
- * Description: Unit test 5 tests mineCard function.
- * From assignment 2 there were 2 bugs that were introduced.
- * 1) and 2) both OR logical operators in the function are
- * switched to AND operators.  
+ * Author: Hyunwook Shin 
  *-------------------------------------------------------*/
 
 #include "dominion.h"
