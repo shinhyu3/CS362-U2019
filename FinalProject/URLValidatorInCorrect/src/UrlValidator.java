@@ -351,7 +351,7 @@ public class UrlValidator implements Serializable {
      */
     protected boolean isValidScheme(String scheme) {
         if (scheme == null) {
-            return false;
+            return true; //random bug introduced. Was false now set to return true.
         }
 
         // TODO could be removed if external schemes were checked in the ctor before being stored
