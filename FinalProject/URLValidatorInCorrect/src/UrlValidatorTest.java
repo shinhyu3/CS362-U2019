@@ -24,7 +24,6 @@ public void firstPartitionTest() {
 			}
 		}
 	}
-}
                     
 public void secondPartitionTest() {
 		System.out.println("\n Testing Authority Partition:\n");
@@ -41,61 +40,57 @@ public void secondPartitionTest() {
 				System.out.println("All authority are valid\n");
 			}
 		}
-	}
-}            
+	}           
                     
 public void thirdPartitionTest() {
-		System.out.println("\n Testing Port Partition:\n");
-		String[] testPort = {"www.google.com:80", "", "www.google:-80"};
-		UrlValidator portArray = new UrlValidator(testPort, 0);
-		for (int i = 0; i < testPort.length; i++) {
-			String currentPort = testPort[i];
-			System.out.println("\nTesting " + currentPort);
-			boolean valid = portArray.isValidPort(currentPort);
-			if (valid == false && i == 1 || valid == false && i == 2) {
+	System.out.println("\n Testing Port Partition:\n");
+	String[] testPort = {"www.google.com:80", "", "www.google:-80"};
+	UrlValidator portArray = new UrlValidator(testPort, 0);
+	for (int i = 0; i < testPort.length; i++) {
+		String currentPort = testPort[i];
+		System.out.println("\nTesting " + currentPort);
+		boolean valid = portArray.isValidPort(currentPort);
+		if (valid == false && i == 1 || valid == false && i == 2) {
 				System.out.println("Failed, invalid port\n");
-			}
-			else {
-				System.out.println("All port are valid\n");
-			}
+		}
+		else {
+			System.out.println("All port are valid\n");
 		}
 	}
-}   
+}
                     
 public void fourthPartitionTest() {
-		System.out.println("\n Testing Path Partition:\n");
-		String[] testPath = {"/..", "testing", "/../"};
-		UrlValidator pathArray = new UrlValidator(testPath, 0);
-		for (int i = 0; i < testPath.length; i++) {
-			String currentPath = testPath[i];
-			System.out.println("\nTesting " + currentPath);
-			boolean valid = pathArray.isValidPort(currentPath);
-			if (valid == false && i == 1) {
-				System.out.println("Failed, invalid path\n");
-			}
-			else {
-				System.out.println("All path are valid\n");
-			}
+	System.out.println("\n Testing Path Partition:\n");
+	String[] testPath = {"/..", "testing", "/../"};
+	UrlValidator pathArray = new UrlValidator(testPath, 0);
+	for (int i = 0; i < testPath.length; i++) {
+		String currentPath = testPath[i];
+		System.out.println("\nTesting " + currentPath);
+		boolean valid = pathArray.isValidPort(currentPath);
+		if (valid == false && i == 1) {
+			System.out.println("Failed, invalid path\n");
+		}
+		else {
+			System.out.println("All path are valid\n");
 		}
 	}
-}                      
+}                     
     
 public void fifthPartitionTest() {
-		System.out.println("\n Testing Queries Partition:\n");
-		String[] testQueries = {" ", "", "/"};
-		UrlValidator queriesArray = new UrlValidator(testQueries, 0);
-		for (int i = 0; i < testQueries.length; i++) {
-			String currentQueries = testQueries[i];
-			System.out.println("\nTesting " + currentQueries);
-			boolean valid = queriesArray.isValidPort(currentQueries);
-			if (valid == false && i == 2) {
-				System.out.println("Failed, invalid queries\n");
-			}
-			else {
-				System.out.println("All queries are valid\n");
-			}
+	System.out.println("\n Testing Queries Partition:\n");
+	String[] testQueries = {" ", "", "/"};
+	UrlValidator queriesArray = new UrlValidator(testQueries, 0);
+	for (int i = 0; i < testQueries.length; i++) {
+		String currentQueries = testQueries[i];
+		System.out.println("\nTesting " + currentQueries);
+		boolean valid = queriesArray.isValidPort(currentQueries);
+		if (valid == false && i == 2) {
+			System.out.println("Failed, invalid queries\n");
+		}
+		else {
+			System.out.println("All queries are valid\n");
 		}
 	}
-}   
-                   
-    
+}
+   
+                       
