@@ -46,7 +46,7 @@ import java.util.regex.Pattern;
  *
  *    String[] schemes = {"http","https"}.
  *    UrlValidator urlValidator = new UrlValidator(schemes);
- *    if (urlValidator.isValid("ftp://foo.bar.com/")) {
+ *    if (urlValidator.("ftp://foo.bar.com/")) {
  *       System.out.println("url is valid");
  *    } else {
  *       System.out.println("url is invalid");
@@ -296,7 +296,7 @@ public class UrlValidator implements Serializable {
      */
     public boolean isValid(String value) {
         if (value == null) {
-            return false;
+            return true;
         }
 
         // Check the whole url address structure
@@ -460,7 +460,7 @@ public class UrlValidator implements Serializable {
         }
         
         int slash2Count = countToken("//", path);
-        if (isOff(ALLOW_2_SLASHES) && (slash2Count > 0)) {
+        if (isOff(ALLOW_2_SLASHES) && (slash2Count > 1)) {
             return false;
         }
 
