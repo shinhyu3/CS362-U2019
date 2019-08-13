@@ -22,7 +22,6 @@ public void firstPartitionTest() {
 			else {
 				System.out.println("All schemes are valid\n");
 			}
-        }
 	}
 }
                     
@@ -40,7 +39,6 @@ public void secondPartitionTest() {
 			else {
 				System.out.println("All authority are valid\n");
 			}
-        }
 	}
 }            
                     
@@ -58,7 +56,6 @@ public void thirdPartitionTest() {
 			else {
 				System.out.println("All port are valid\n");
 			}
-        }
 	}
 }   
                     
@@ -76,7 +73,6 @@ public void fourthPartitionTest() {
 			else {
 				System.out.println("All path are valid\n");
 			}
-        }
 	}
 }                      
     
@@ -94,7 +90,6 @@ public void fifthPartitionTest() {
 			else {
 				System.out.println("All queries are valid\n");
 			}
-        }
 	}
 }   
                    
