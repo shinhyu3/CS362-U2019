@@ -1,10 +1,30 @@
+public void testUnit1() { 	// kwonma 
+	   // this test should pass since this program allows multiple slashes in the path
+	   String url = "http://www.apache.org//test/index.html";
+	   UrlValidator validator1 = new UrlValidator(UrlValidator.ALLOW_2_SLASHES);
+	   assertTrue("https://apache.org/ should be allowed by default",
+               validator1.isValid(url));
+	   
+	   // this test just makes sure the flag to ALLOW_2_SLASHES is doing it's job
+	   // this test should fail - there is a valid path, but multiple '//' are not allowed
+	   url = "http://www.apache.org//test/index.html";
+	   UrlValidator validator2 = new UrlValidator();
+	   assertFalse("https://apache.org/ should be allowed by default",
+               validator2.isValid(url));
+	   
+	   // this test should fail - there is a valid path, but more than two '/' are not allowed
+	   url = "http:///www.apache.org/test/index.html";
+	   UrlValidator validator3 = new UrlValidator();
+	   assertFalse("https://apache.org/ should be allowed by default",
+               validator3.isValid(url));
+}
 
 public void testUnit2() {
     	String url = ""
     	UrlValidator validTest = new UrlValidator();
     	//url is invalid and therefore the message will be printed.
     	assertFalse("url is valid.", validTest.isValid(url); 
-    }
+}
                     
 public void firstPartitionTest() {
 		System.out.println("\n Testing Schemes Partition:\n");
