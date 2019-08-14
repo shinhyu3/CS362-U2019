@@ -1,5 +1,3 @@
-//Manual testing? 100 URLs needed for manual testing. Can someone create test data?
-
 
 public void testUnit2() {
     	String url = ""
